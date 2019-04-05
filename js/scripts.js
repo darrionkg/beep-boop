@@ -58,29 +58,41 @@ function createTable(table, result) {
   }
 };
 
-function startBopIt() {
-  randomNumber = Math.floor(Math.random() * 3)
+function startBopIt(points) {
+  $("#twistIt, #bopIt, #pullIt").hide();
+  var randomNumber = Math.floor(Math.random() * 3);
     if(randomNumber === 0) {
       $("#twistIt").show();
       $("#twist").click(function() {
-        alert("You win");
+        points += 1;
+        clearTimeout();
+        setTimeout(gameOver, 5000);
+        return startBopIt(points);
       });
     } else if(randomNumber === 1) {
       $("#bopIt").show();
       $("#bop").click(function() {
-        alert("You win");
+        points += 1;
+        clearTimeout();
+        setTimeout(gameOver, 5000);
+        return startBopIt(points);
       });
     } else {
       $("#pullIt").show();
       $("#pull").click(function() {
-        alert("You win");
+        points += 1;
+        clearTimeout();
+        setTimeout(gameOver, 5000);
+        return startBopIt(points);
       });
     }
-  console.log(randomNumber);
 }
 
-function twistIt() {
-
+function gameOver(points) {
+  $("#twist").hide();
+  $("#bop").hide();
+  $("#pull").hide();
+  $("#gameOver").show();
 }
 
 //User Interface Logic
@@ -93,7 +105,6 @@ $(document).ready(function() {
     var table = getTable(number);
     var result = convertNumber(number);
     var makeTable = createTable(table, result);
-    console.log(result);
   });
 
   //Bop It Game
@@ -101,6 +112,9 @@ $(document).ready(function() {
     $("#twist").show();
     $("#bop").show();
     $("#pull").show();
-    setInterval(startBopIt(), 5000);
+    const totalPoints = 0;
+    startBopIt(totalPoints);
+    $("#gameOver").text(totalPoints);
+
   });
 });

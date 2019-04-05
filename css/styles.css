@@ -68,6 +68,10 @@ body {
   display: none;
 }
 
+#gameOver {
+  display: none;
+}
+
 
 /* Media queries to override built-in bootstrap */
 @media (min-width: 768px) {
