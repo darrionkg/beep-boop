@@ -1,13 +1,17 @@
 # Beep boop
 
-#### A beep boop game, 3/29/2019
+#### A beep boop generator, 3/29/2019
 #### https://darrionkg.github.io/beep-boop
 
 #### By **Darrion Gering**
 
 ## Description
 
-_This program allows the user to enter a number, and returns Beep, boop or I'm sorry, Dave. I'm afraid I can't do that._
+_This program allows the user to enter a number, and returns a nubmer, Beep, boop or I'm sorry, Dave. I'm afraid I can't do that._
+
+_Also includes a Bop It game if you get bored of the robot counter!_
+
+
 
 #### Specs
 |Spec|Input|Output|
