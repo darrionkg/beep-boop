@@ -64,7 +64,7 @@ body {
   width: 200px;
 }
 
-#twistIt, #bopIt, #pullIt {
+#twistIt, #bopIt, #pullIt, #points {
   display: none;
 }
 

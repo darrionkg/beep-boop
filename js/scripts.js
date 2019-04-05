@@ -59,40 +59,34 @@ function createTable(table, result) {
 };
 
 function startBopIt(points) {
-  $("#twistIt, #bopIt, #pullIt").hide();
+  $("#gameOver, #points, #twistIt, #bopIt, #pullIt").hide();
   var randomNumber = Math.floor(Math.random() * 3);
     if(randomNumber === 0) {
       $("#twistIt").show();
       $("#twist").click(function() {
         points += 1;
-        clearTimeout();
-        setTimeout(gameOver, 5000);
-        return startBopIt(points);
+        startBopIt(points);
       });
     } else if(randomNumber === 1) {
       $("#bopIt").show();
       $("#bop").click(function() {
         points += 1;
-        clearTimeout();
-        setTimeout(gameOver, 5000);
-        return startBopIt(points);
+        startBopIt(points);
       });
     } else {
       $("#pullIt").show();
       $("#pull").click(function() {
         points += 1;
-        clearTimeout();
-        setTimeout(gameOver, 5000);
-        return startBopIt(points);
+        startBopIt(points);
       });
     }
+    $("#points").text(points);
 }
 
 function gameOver(points) {
-  $("#twist").hide();
-  $("#bop").hide();
-  $("#pull").hide();
-  $("#gameOver").show();
+  $("#twist, #bop, #pull").hide();
+  $("#twistIt, #bopIt, #pullIt").hide();
+  $("#gameOver, #points").show();
 }
 
 //User Interface Logic
@@ -112,9 +106,8 @@ $(document).ready(function() {
     $("#twist").show();
     $("#bop").show();
     $("#pull").show();
+    var timer = setTimeout(gameOver, 20000);
     const totalPoints = 0;
     startBopIt(totalPoints);
-    $("#gameOver").text(totalPoints);
-
   });
 });
