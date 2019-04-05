@@ -58,8 +58,34 @@ function createTable(table, result) {
   }
 };
 
+function startBopIt() {
+  randomNumber = Math.floor(Math.random() * 3)
+    if(randomNumber === 0) {
+      $("#twistIt").show();
+      $("#twist").click(function() {
+        alert("You win");
+      });
+    } else if(randomNumber === 1) {
+      $("#bopIt").show();
+      $("#bop").click(function() {
+        alert("You win");
+      });
+    } else {
+      $("#pullIt").show();
+      $("#pull").click(function() {
+        alert("You win");
+      });
+    }
+  console.log(randomNumber);
+}
+
+function twistIt() {
+
+}
+
 //User Interface Logic
 $(document).ready(function() {
+  // Robot Language Generator
   $("#userInput").submit(function(event) {
     $("#myTable").html("");
     event.preventDefault();
@@ -68,7 +94,13 @@ $(document).ready(function() {
     var result = convertNumber(number);
     var makeTable = createTable(table, result);
     console.log(result);
+  });
 
-
+  //Bop It Game
+  $("#playBopIt").click(function() {
+    $("#twist").show();
+    $("#bop").show();
+    $("#pull").show();
+    setInterval(startBopIt(), 5000);
   });
 });
