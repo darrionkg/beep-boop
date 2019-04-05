@@ -61,13 +61,12 @@ function createTable(table, result) {
 //User Interface Logic
 $(document).ready(function() {
   $("#userInput").submit(function(event) {
+    $("#myTable").html("");
     event.preventDefault();
     var number = $("input#number").val();
     var table = getTable(number);
     var result = convertNumber(number);
     var makeTable = createTable(table, result);
-    $("#result").show();
-    $("#result").text(result);
     console.log(result);
 
 
