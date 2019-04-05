@@ -4,11 +4,9 @@ body {
 
 #myHeader {
   text-align: center;
-}
-
-#myHeader .jumbotron {
   padding: 0;
 }
+
 
 #myTable {
   width: 80%;
@@ -41,14 +39,40 @@ body {
   width: 10%;
 }
 
-.botItGame {
-  position: fixed;
-  width: 600px;
-  height: 200px;
+#playBopIt {
+  margin-top: 20px;
+  margin-bottom: 10px;
+  position: relative;
+  height: 50px;
+  border-radius: 50%;
 }
 
-.botItGame img {
-  position: relative;
+.bopItGame {
+  display: flex;
+  justify-content: center;
+}
+
+.buttonsDiv {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+}
+.bopItGame img {
+  visibility: hidden;
+  border: 2px solid black;
   height: 200px;
   width: 200px;
+}
+
+
+/* Media queries to override built-in bootstrap */
+@media (min-width: 768px) {
+  .container {
+      width: 100%;
+  }
+}
+@media (min-width: 1200px) {
+  .container {
+    width: 100%;
+  }
 }
