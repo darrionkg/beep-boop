@@ -1,7 +1,15 @@
 function convertNumber(number) {
   outputArray = [];
   for(var i = 0; i < number; i++) {
-    outputArray.push(i);
+    if(i === 1) {
+      outputArray.push("Beep!");
+    } else if(i === 2) {
+      outputArray.push("Boop!")
+    } else if(i === 3) {
+      outputArray.push("I'm sorry Dave, I can't do that!")
+    } else {
+      outputArray.push(i);
+    }
   }
   console.log(outputArray);
 };
