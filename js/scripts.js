@@ -1,5 +1,9 @@
 function convertNumber(number) {
-
+  outputArray = [];
+  for(var i = 0; i < number; i++) {
+    outputArray.push(i);
+  }
+  console.log(outputArray);
 };
 
 
