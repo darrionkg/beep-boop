@@ -1,0 +1,76 @@
+body {
+  background-color: #C1DFF0;
+  margin: 5% 15%;
+}
+
+#myHeader {
+  text-align: center;
+  padding: 0;
+}
+
+#myHeader p {
+  padding: 10px;
+  font-size: 16px;
+}
+
+#titleHeader {
+  background-color: #36494E;
+  color: #eee;
+  width: inherit;
+}
+
+#surveyForm {
+  background-color: #eee;
+  margin: 0 auto;
+}
+
+.form-group {
+  margin-top: 3%;
+}
+
+.form-control {
+  width: 50%;
+}
+.question5 {
+  margin-bottom: 7%;
+}
+
+.rubyRails, .phpDrupal, .javaAndroid, .cssDesign, .cSharpNet {
+  display: none;
+  height: 60px;
+  width: auto;
+  margin-top: 5px;
+  margin-bottom: 10px;
+}
+
+#noSelection {
+  display: none;
+  margin-left: 10px;
+  margin-top: 10px;
+  font-weight: bold;
+  color: red;
+}
+
+.buttonContainer {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding-bottom: 5px;
+}
+
+.panel {
+  width: 75%;
+}
+
+
+/* Media queries to override built-in bootstrap */
+@media (min-width: 768px) {
+  .container {
+      width: 100%;
+  }
+}
+@media (min-width: 1200px) {
+  .container {
+    width: 100%;
+  }
+}
