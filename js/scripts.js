@@ -1,20 +1,19 @@
 function convertNumber(number) {
   outputArray = [];
   numberArray = []
-  for(var i = 0; i < number; i++) {
+  for(var i = 0; i <= number; i++) {
     numberArray.push(i.toString());
-    if(numberArray[i].includes("1")) {
-      outputArray.push("Beep!");
+    if(numberArray[i].includes("3")) {
+      outputArray.push(" I'm sorry Dave, I can't do that!")
     } else if(numberArray[i].includes("2")) {
-      outputArray.push("Boop!")
-    } else if(numberArray[i].includes("3")) {
-      outputArray.push("I'm sorry Dave, I can't do that!")
+      outputArray.push(" Boop!");
+    } else if(numberArray[i].includes("1")) {
+      outputArray.push(" Beep!");
     } else {
-      outputArray.push(i);
+      outputArray.push(" " + i);
     }
   }
-  console.log(numberArray);
-  console.log(outputArray);
+  return outputArray;
 };
 
 
@@ -26,6 +25,7 @@ $(document).ready(function() {
     var result = convertNumber(number);
     $("#result").show();
     $("#result").text(result);
+    console.log(result);
 
 
   });
