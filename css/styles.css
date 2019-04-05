@@ -1,6 +1,13 @@
 body {
   background-color: #C1DFF0;
-  margin: 5% 15%;
+}
+
+#myHeader {
+  text-align: center;
+}
+
+#myHeader .jumbotron {
+  padding: 0;
 }
 
 #myTable {
@@ -15,4 +22,33 @@ body {
 #myTable td {
   width: 10px;
   height: 5px;
+}
+
+#userInput {
+  display: flex;
+  margin: 10px 20px;
+  justify-content: center;
+}
+#userInput h2{
+  clear: both;
+  display: flex;
+  justify-content: center;
+}
+
+#userInput input#number {
+  font-size: 20px;
+  margin: 5px;
+  width: 10%;
+}
+
+.botItGame {
+  position: fixed;
+  width: 600px;
+  height: 200px;
+}
+
+.botItGame img {
+  position: relative;
+  height: 200px;
+  width: 200px;
 }

@@ -10,7 +10,10 @@
   </head>
   <body>
     <div class="container">
-      <h1>Robot Counter</h1>
+      <header class="jumbotron" id="myHeader">
+        <h1>Robot Counter</h1>
+        <p><em>This program counts from zero to the number you enter in a robot language</em></p>
+      </header>
       <form id="userInput">
         <h2>Enter a number to convert to a robot counter: </h2>
         <label for="number"></label>
@@ -18,8 +21,13 @@
         <button type="submit" class="btn btn-success">Submit</button>
       </form>
       <table id="myTable">
-
       </table>
+      <button id=playBopIt>Play Bop It!</button>
+      <div class="bopItGame">
+        <img src="img/twist.png" alt="twist">
+        <img src="img/bop.jpg" alt="bop">
+        <img src="img/pull.jpg" alt="pull">
+      </div>
     </div>
   </body>
 </html>
